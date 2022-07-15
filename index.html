@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>AR Demo</title>
 </head>
@@ -13,14 +14,20 @@
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 4x4_BCH_13_5_5'>
         <a-assets>
             <!-- <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item> -->
-            <a-asset-item id="animated-asset" src="/soda-ar/models/food_box/scene.gltf"></a-asset-item>
+            <!-- <a-asset-item id="animated-asset" src="/soda-ar/models/food_box/scene.gltf"></a-asset-item> -->
+            <video id="mondamin-video" autoplay loop="true" src="/soda-ar/video/mondamin.mp4"></video>
+            <img id="fondan-img" src="/soda-ar/img/fondan.jpg">
+            <img id="polba-img" src="/soda-ar/img/polba.jpg">
         </a-assets>
 
         <a-marker id="animated-marker" type='barcode' value='6'>
-            <a-entity
+            <!-- <a-entity
                 gltf-model="#animated-asset"
                 scale="40 40 40">
-            </a-entity>
+            </a-entity> -->
+            <a-video src="#mondamin-video" width="8" height="4.5" position="10 0 -20"></a-video>
+            <a-image src="#polba-img" width="3" height="3" position="0 0 10"></a-image>
+            <a-image src="#fondan-img" width="3" height="3" position="-10 0 0"></a-image>
         </a-marker>
 
         <a-entity camera></a-entity>
