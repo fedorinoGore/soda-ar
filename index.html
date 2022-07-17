@@ -15,7 +15,7 @@
         <a-assets>
             <!-- <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item> -->
             <!-- <a-asset-item id="animated-asset" src="/soda-ar/models/food_box/scene.gltf"></a-asset-item> -->
-            <video id="mondamin-video" allow="autoplay" crossOrigin="anonymous" type="video/mp4" preload="auto" poster="/soda-ar/img/packshot.jpg" src="/soda-ar/video/mondamin.mp4"></video>
+            <video id="mondamin-video" type="video/mp4" autoplay muted poster="/soda-ar/img/packshot.jpg" src="/soda-ar/video/mondamin.mp4"></video>
             <img id="fondan-img" src="/soda-ar/img/fondan.jpg">
             <img id="polba-img" src="/soda-ar/img/polba.jpg">
         </a-assets>
@@ -25,7 +25,7 @@
                 gltf-model="#animated-asset"
                 scale="40 40 40">
             </a-entity> -->
-            <a-video src="#mondamin-video" width="8" height="4.5" position="0 0 0" rotation="0 0 90"></a-video>
+            <a-video src="#mondamin-video" width="8" height="4.5" position="0 0 0" rotation="90 0 0"></a-video>
             <!-- <a-entity>
                 <a-image src="#polba-img" width="3" height="3" position="0 0 0"></a-image>
             </a-entity> -->
